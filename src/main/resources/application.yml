@@ -11,5 +11,5 @@ pagehelper:
   helper-dialect: mysql
 logging:
   level:
-    com.cskaoyan.nobug.mapper: debug
-    com.cskaoyan.nobug.service: warn
+    com.team5.mapper: debug
+    com.team5.nobug.service: warn
