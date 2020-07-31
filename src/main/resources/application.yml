@@ -12,4 +12,4 @@ pagehelper:
 logging:
   level:
     com.team5.mapper: debug
-    com.team5.nobug.service: warn
+    com.team5.service: warn
