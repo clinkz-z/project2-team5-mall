@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.team5.mapper.AdminAuthMapper">
+
+    <select id="login" resultType="int">
+        select COUNT(*)
+        from mall_admin
+        <where>
+            <if test="loginBO.username != null">
+                username = #{loginBO.username}
+            </if>
+            <if test="loginBO.password != null">
+                and password = #{loginBO.password}
+            </if>
+        </where>
+    </select>
+
+    <select id="getGoodsTotal" resultType="java.lang.Integer">
+        select COUNT(*)
+        from mall_goods
+    </select>
+
+    <select id="getOrderTotal" resultType="java.lang.Integer">
+        select COUNT(*)
+        from mall_order
+    </select>
+
+    <select id="getProductTotal" resultType="java.lang.Integer">
+        select COUNT(*)
+        from mall_goods_product
+    </select>
+
+    <select id="gerUserTotal" resultType="java.lang.Integer">
+        select count(*)
+        from mall_user;
+    </select>
+
+
+</mapper>
